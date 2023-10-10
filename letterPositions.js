@@ -23,3 +23,5 @@ console.log(letterPositions("lighthouse in the house"));
 
 // Example usage of the assertArrayEqual function to compare letter positions
 console.log(assertArrayEqual(letterPositions("hello").e, [1]));
+
+module.exports = letterPositions;

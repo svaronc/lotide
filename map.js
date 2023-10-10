@@ -17,3 +17,4 @@ const results2 = map(words, (word) => word.length);
 console.log(assertArrayEqual(results2, [6, 7, 2, 5, 3]));
 const results3 = map(words, (word) => (word += "!"));
 console.log(assertArrayEqual(results3, ["not good"]));
+module.exports = map;

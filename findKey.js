@@ -39,3 +39,5 @@ console.log(test);
 console.log(assertEqual(test, "noma"));
 console.log(assertEqual(test, "Ora"));
 console.log(assertEqual(test2, "Akelarre"));
+
+module.exports = findKey;

@@ -29,3 +29,4 @@ console.log(
 console.log(
   assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "drama")
 );
+module.exports = findKeyByValue;

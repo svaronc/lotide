@@ -32,3 +32,5 @@ console.log(
     n: 1,
   })
 );
+
+module.exports = countLetters;
