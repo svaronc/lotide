@@ -1,14 +1,5 @@
 // Function that compares two values and returns a message indicating if they are equal or not
-const assertEqual = function (actual, expected) {
-  let message = "";
-  if (actual === expected) {
-    message = `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
-  } else {
-    message = `🛑🛑🛑 Assertion Failed:${actual} !== ${expected}`;
-  }
-  return message;
-};
-
+const assertEqual = require('./assertEqual')
 // Function that counts occurrences of specific items in an array
 const countOnly = function (allItems, itemsToCount) {
   let result = {};

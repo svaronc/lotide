@@ -1,13 +1,5 @@
 // Function to compare two values and generate an assertion message
-const assertEqual = function (actual, expected) {
-  let message = "";
-  if (actual === expected) {
-    message = `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
-  } else {
-    message = `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
-  }
-  return message;
-};
+const eqArrays = require('./eqArrays');
 
 // Function to compare two objects for equality
 const eqObjects = function (object1, object2) {
@@ -39,57 +31,5 @@ const eqObjects = function (object1, object2) {
 };
 
 // Function to compare two arrays for equality
-const eqArrays = function (arr1, arr2) {
-  // Check if the length of both arrays is the same
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
 
-  // Loop through each item in the arrays and compare if they are the same
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-
-  return true; // If no differences were found, the arrays are considered equal
-};
-
-// Test cases
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", color: "red" };
-console.log(assertEqual(eqObjects(shirtObject, anotherShirtObject), true)); // => true
-
-const longSleeveShirtObject = {
-  size: "medium",
-  color: "red",
-  sleeveLength: "long",
-};
-console.log(assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false)); // => false
-
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = {
-  size: "medium",
-  colors: ["red", "blue"],
-};
-eqObjects(multiColorShirtObject, anotherMultiColorShirtObject); // => true
-
-const longSleeveMultiColorShirtObject = {
-  size: "medium",
-  colors: ["red", "blue"],
-  sleeveLength: "long",
-};
-eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject); // => false
-
-console.log(
-  assertEqual(
-    eqObjects(multiColorShirtObject, anotherMultiColorShirtObject),
-    true
-  )
-);
-console.log(
-  assertEqual(
-    eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject),
-    false
-  )
-);
+module.exports = eqObjects;
