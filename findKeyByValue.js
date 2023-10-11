@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 // Function to find a key in an object by its corresponding value
 const findKeyByValue = function (object, value) {
   let result; // Initialize a variable to store the found key
@@ -15,18 +13,4 @@ const findKeyByValue = function (object, value) {
   return result; // Return the key corresponding to the given value (or undefined if not found)
 };
 
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama: "The Wire",
-};
-console.log(
-  assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama")
-);
-console.log(
-  assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined)
-);
-console.log(
-  assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "drama")
-);
 module.exports = findKeyByValue;

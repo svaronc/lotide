@@ -1,10 +1,8 @@
-// Function to compare two values and generate an assertion message
 const eqArrays = require('./eqArrays');
-
 // Function to compare two objects for equality
 const eqObjects = function (object1, object2) {
   let keys1 = Object.keys(object1); // Get the keys of object1
-  let keys2 = Object.keys(object1); // Get the keys of object2 (Note: Should be keys2 = Object.keys(object2))
+  let keys2 = Object.keys(object2); // Get the keys of object2 (Note: Should be keys2 = Object.keys(object2))
 
   // Check if the number of keys in both objects is the same
   if (keys1.length !== keys2.length) {
@@ -30,6 +28,5 @@ const eqObjects = function (object1, object2) {
   return true; // If no differences were found, the objects are considered equal
 };
 
-// Function to compare two arrays for equality
-
 module.exports = eqObjects;
+

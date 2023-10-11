@@ -1,4 +1,3 @@
-
 const tail = function (array) {
   let newArray;
   if (array.length > 1) {

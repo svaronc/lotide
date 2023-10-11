@@ -1,4 +1,3 @@
-
 const eqArrays = function (arr1, arr2) {
   //checking if the length is the same
   if (arr1.length !== arr2.length) {
