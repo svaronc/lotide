@@ -1,8 +1,8 @@
 {
-  "name": "@svaronc/lotide",
+  "name": "@svaron/lotide",
   "version": "1.0.0",
   "description": "A mini clone of the Lodash library.",
-  "main": "assertArrayEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
